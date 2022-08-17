@@ -1,0 +1,57 @@
+@import '../../constants/colors.scss';
+
+.card-item {
+	background-color: $secondary-color;
+	cursor: pointer;
+	height: 176px;
+
+	.card-inner {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+
+		.rank {
+			width: 40px;
+			height: 40px;
+			background-color: $font-secondary;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			font-size: x-large;
+			font-weight: 600;
+			color: $font-primary;
+			position: absolute;
+			top: 4px;
+			right: 4px;
+			transform: rotate(10deg);
+		}
+		.card-left {
+			flex: 1;
+			img {
+				height: inherit;
+				object-fit: contain;
+			}
+		}
+
+		.card-right {
+			flex: 2;
+			padding: 20px 40px 20px 20px;
+
+			.card-info {
+				color: $font-primary;
+				display: grid;
+				grid-template-rows: 3fr 1fr 1fr;
+				grid-gap: 5px;
+
+				h2 {
+					font-size: 1.25rem;
+					font-weight: 400;
+				}
+
+				.crew {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
