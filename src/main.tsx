@@ -2,18 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store } from './redux/store';
-import { StateContext } from './context/StateContext';
+import { movieApiSlice } from './api/topMoviesApi';
+import { ApiProvider } from '@reduxjs/toolkit/dist/query/react';
+import { StateContext } from './context/AppContext';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<Provider store={store}>
+		<ApiProvider api={movieApiSlice}>
 			<StateContext>
 				<BrowserRouter>
 					<App />
 				</BrowserRouter>
 			</StateContext>
-		</Provider>
+		</ApiProvider>
 	</React.StrictMode>
 );

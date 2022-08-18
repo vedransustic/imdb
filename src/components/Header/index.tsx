@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useStateContext } from '../../context/StateContext';
+import { useStateContext } from '../../context/AppContext';
 import User from '../../images/user.png';
 import './index.scss';
 

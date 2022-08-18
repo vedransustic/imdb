@@ -20,10 +20,3 @@ export type movieType = {
 export type AuxProps = {
 	children: React.ReactNode;
 };
-
-export type ContextType = {
-	loading: boolean;
-	moviesToDisplay: movieType[];
-	error: any;
-	handleSearch: (input: string) => void;
-};
